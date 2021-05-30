@@ -1,5 +1,5 @@
 exports.seed = function (knex, Promise) {
-  return knex("posts").insert([
+  return knex("education").insert([
     {
       completed: "03 05 2020",
       accolade: "Full Stack Web Development and Technical Interviewing",
