@@ -5,7 +5,7 @@ exports.up = function (knex) {
       tbl.text("username", 128).unique().notNullable();
       tbl.text("firstName", 60);
       tbl.text("lastName", 60);
-      tbl.boolean("admin");
+      tbl.boolean("admin").defaultTo(false);
       tbl.text("email", 80);
       tbl.timestamp("created");
       tbl.text("about", 2000);
@@ -40,6 +40,7 @@ exports.up = function (knex) {
     .createTable("visitorLog", (tbl) => {
       tbl.increments();
       tbl.timestamp("when");
+      tbl.boolean("approved").defaultTo(false);
       tbl.text("what", 2000);
       tbl
         .integer("user_id")
