@@ -8,9 +8,9 @@ module.exports = {
 };
 
 function find() {
-  return db("users as u")
-    .join("roles as r", "u.role", "=", "r.id")
-    .select("u.id", "u.username", "r.name as role");
+  return db("projects as p")
+    .join("users as u", "u.id", "=", "p.user_id")
+    .select("p.id", "p.where", "p.what", "u.username as author");
 }
 
 function findBy(filter) {

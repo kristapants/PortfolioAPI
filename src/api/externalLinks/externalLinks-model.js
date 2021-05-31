@@ -7,9 +7,7 @@ module.exports = {
 };
 
 function find() {
-  return db("users as u")
-    .join("roles as r", "u.role", "=", "r.id")
-    .select("u.id", "u.username", "r.name as role");
+  return db("externalLinks");
 }
 
 function findBy(filter) {

@@ -1,6 +1,6 @@
 # Portfolio API
 
-This project is an api meant to fill out a portfolio for github.com/kristapants.
+This project is an api meant to fill out a portfolio for github.com/kristapants. .
 
 # Express API Starter
 
