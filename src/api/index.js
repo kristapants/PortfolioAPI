@@ -10,6 +10,7 @@ const server = express();
 server.get("/", (req, res) => {
   res.json({
     message: "API - 👋🌎🌍🌏",
+    activeRoutes: "users, education, projects, externalLinks, visitorLog",
   });
 });
 
