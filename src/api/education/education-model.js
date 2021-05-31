@@ -1,4 +1,4 @@
-const db = require("../../../data/KristaV.db3");
+const db = require("../../../data/db-config");
 
 module.exports = {
   add,
@@ -8,9 +8,9 @@ module.exports = {
 };
 
 function find() {
-  return db("users as u")
-    .join("roles as r", "u.role", "=", "r.id")
-    .select("u.id", "u.username", "r.name as role");
+  return db("education as e")
+    .join("users as u")
+    .select("u.username", "e.id", "e.completed", "e.accolade", "e.about");
 }
 
 function findBy(filter) {
